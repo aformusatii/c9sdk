@@ -1,0 +1,14 @@
+[Unit]
+Description=Cloud9 IDE
+After=network.target
+
+[Service]
+ExecStart=/home/odroid/tools/c9sdk/start.sh
+WorkingDirectory=/home/odroid/tools/c9sdk
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=odroid
+
+[Install]
+WantedBy=multi-user.target
